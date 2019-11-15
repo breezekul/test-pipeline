@@ -12,7 +12,7 @@ pipeline {
                 }
             }
             steps {
-                build job: 'kul-deploy', parameters: [string(name: 'dockerVersion', value: env.dockerVersion)]
+                build job: 'kul-deploy', parameters: [string(name: 'dockerVersion', value: env.dockerVersion),string(name: 'test', value: 'kul')]
             }
         }
     }
